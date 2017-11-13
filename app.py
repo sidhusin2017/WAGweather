@@ -52,7 +52,7 @@ def webhook():
 def processRequest(req):
     if req.get("result").get("action") != "handleAdd":
         return {}
-    baseurl = "https://40.121.149.23:9001/cce"
+    baseurl = "https://query.yahooapis.com/v1/public/yql"
     yql_query = makeYqlQuery(req)
     if yql_query is None:
         return {}
