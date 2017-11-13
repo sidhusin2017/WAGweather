@@ -52,7 +52,7 @@ def webhook():
 def processRequest(req):
     if req.get("result").get("action") != "yahooWeatherForecast":
         return {}
-    baseurl = "http://40.121.149.23:9000/cce/landscape/nodes"
+    baseurl = "http://40.121.149.23:9000/cce/landscape/nodes?name=local"
     yql_query = makeYqlQuery(req)
     if yql_query is None:
         return {}
